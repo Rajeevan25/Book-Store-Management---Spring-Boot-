@@ -9,5 +9,17 @@ public class BookController {
     public String home() {
         return "home"; 
     }
+    @GetMapping("/book_register")
+    public String bookRegister() {
+        return "book_register"; 
+    }
+    @GetMapping("/bookList")
+    public String getAllBooks() {    
+        return "bookList"; 
+    }       
+    @GetMapping("/myBooks")
+    public String myBooks() {
+        return "myBooks";          
+    }
 
 }

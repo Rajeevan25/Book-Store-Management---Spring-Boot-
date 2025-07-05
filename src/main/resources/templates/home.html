@@ -1,11 +1,77 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
+<!-- File: src/main/resources/templates/home.html -->
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <title>Book Store</title>
-</head>
-<body>
-    <h1>Welcome to the Book Store</h1>
-    <p>Explore our collection of books.</p>
-</body>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">LKR Books</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-white" href="/bookList">Available Books</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-white" href="/myBooks">My Books</a>
+                </li>
+                
+      
+            </ul>
+            <form class="d-flex" onsubmit="handleSearch(event)">
+              <input class="form-control me-2 bg-dark text-white" 
+                    type="search" 
+                    placeholder="Search" 
+                    aria-label="Search"
+                    name="query">
+            </form>
+            <div>                
+                <a class="btn btn-outline-success" href="#" role="button">Login</a>
+                <a class="btn btn-outline-success" href="book_register" role="button">Register</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4 text-center my-4">
+      <h1>Welcome to LKR Books</h1>
+      <p>At LKR Books, we believe that reading is more than just a hobby—it's a gateway to imagination, knowledge, and empowerment. Whether you're a student looking for textbooks, a professional in search of insightful non-fiction, or a passionate reader exploring the world of fiction, we offer a carefully curated selection that caters to all age groups and interests. Our mission is to make literature affordable and accessible to everyone by pricing all our titles in Sri Lankan Rupees (LKR), with regular discounts, seasonal offers, and island-wide delivery. From local authors to international bestsellers, from children’s storybooks to academic research materials, our growing collection is designed to support your reading journey every step of the way. Dive into the world of books—right here at LKR Books, where every page takes you closer to your next adventure.</p> 
+      <img src="/images/library-Blog-Size.jpg" class="img-fluid" alt="Books Image" width="600" height="400">
+    </div> 
+    
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Fiction</h2>
+          <p>Discover the latest in fiction.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Non-Fiction</h2>
+          <p>Explore our non-fiction collection.</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Children's Books</h2>
+          <p>Find books for children of all ages.</p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+  </body>
 </html>
